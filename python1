@@ -1,0 +1,45 @@
+###1. Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included). The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+import csv
+
+​
+
+list = []
+
+for x in range(2000,3201):
+
+    if x%7==0 and x%5!=0:
+
+        list.append(x)
+
+        with open('numbers.csv', 'w') as file:
+
+            writer = csv.writer(file)
+
+            writer.writerow(list)
+
+​
+
+###2. Write a Python program to accept the user's first and last name and then getting them printed in the the reverse order with a space between first name and last name.
+
+First_name = input('Please provide your first name: ')
+
+Last_name = input ('Please provide your last name: ')
+
+name = (First_name[::-1]) + " " + (Last_name[::-1])
+
+print (name)
+
+Please provide your first name: Preeti
+Please provide your last name: Sacha
+iteerP ahcaS
+
+###3. Write a Python program to find the volume of a sphere with diameter 12 cm.Formula: V=4/3 * π * r 3
+
+d = 12
+
+volume = 4/3*3.141*(d/2)**3
+
+print (volume)
+
+904.608
